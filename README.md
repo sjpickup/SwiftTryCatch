@@ -9,11 +9,28 @@ Simple wrapper built around Objective-C `@try`/`@catch`/`@finally`.
 
 ##Usage
 
-### Install via Cocoapods
+### Install via Swift Package Manager
+
+To use this specific repository version of SwiftTryCatch add it to your Package.swift manifest.
+
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "YourModule",
+    dependencies: [
+        .Package(url: "https://github.com/seanparsons/SwiftTryCatch.git", majorVersion: 1, minor: 1),
+    ]
+)
+```
+
+### Install via CocoaPods
 
 To use this specific repository version of SwiftTryCatch use the following pod definition:
 
-    pod 'SwiftTryCatch', :git => 'https://github.com/ravero/SwiftTryCatch.git'
+```ruby
+pod 'SwiftTryCatch', :git => 'https://github.com/ravero/SwiftTryCatch.git'
+```
 
 This will use the podspec from this forked repository with the API signature changes.
 
@@ -22,14 +39,18 @@ This will use the podspec from this forked repository with the API signature cha
 - When prompted with "Would you like to configure an Obj-C bridging header?", press "Yes".
 - Go to bridging header and add:
 
-        #import "SwiftTryCatch.h"
+```objc
+#import "SwiftTryCatch.h"
+```
 
 ### Use
 
-    SwiftTryCatch.tryBlock({
-             // try something
-         }, catchBlock: { (error) in
-             println("\(error.description)")
-         }, finallyBlock: {
-             // close resources
+```swift
+SwiftTryCatch.tryBlock({
+        // try something
+    }, catchBlock: { (error) in
+        println("\(error.description)")
+    }, finallyBlock: {
+        // close resources
     })
+```
