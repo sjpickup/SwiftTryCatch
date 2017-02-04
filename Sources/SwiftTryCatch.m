@@ -1,5 +1,5 @@
 //
-//  SwiftTryCatch.h
+//  SwiftTryCatch.m
 //
 //  Created by William Falcon on 10/10/14.
 //  Copyright (c) 2014 William Falcon. All rights reserved.
