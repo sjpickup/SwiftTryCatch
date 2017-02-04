@@ -19,7 +19,7 @@ import PackageDescription
 let package = Package(
     name: "YourModule",
     dependencies: [
-        .Package(url: "https://github.com/seanparsons/SwiftTryCatch.git", majorVersion: 1, minor: 1),
+        .Package(url: "https://github.com/sjpickup/SwiftTryCatch.git", majorVersion: 1, minor: 1),
     ]
 )
 ```
@@ -29,7 +29,7 @@ let package = Package(
 To use this specific repository version of SwiftTryCatch use the following pod definition:
 
 ```ruby
-pod 'SwiftTryCatch', :git => 'https://github.com/ravero/SwiftTryCatch.git'
+pod 'SwiftTryCatch', :git => 'https://github.com/sjpickup/SwiftTryCatch.git'
 ```
 
 This will use the podspec from this forked repository with the API signature changes.
